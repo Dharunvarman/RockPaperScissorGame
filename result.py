@@ -1,3 +1,9 @@
+'''
+This is the Result Enum class which is used in choice Enum.
+It has three values Win Draw and Loose.
+And customised message when a user Wins/Draws/Looses
+
+'''
 
 from enum import Enum
 

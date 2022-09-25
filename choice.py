@@ -1,3 +1,8 @@
+'''
+This is the main Enum class which does all the calculation, it has three values Rock Paper and Scissor. The function Beats take care of the comparison of rock paper and scissor. The function Equals just checks whether both the enums are same
+
+'''
+
 from enum import Enum
 from result import Result
 

@@ -21,6 +21,9 @@ class Test_choice(unittest.TestCase):
         self.assertEqual(response,Win)
         self.assertEqual(response1,Loose)
         self.assertEqual(response2,Tie)
+        self.assertEqual(response3,Loose)
+        self.assertEqual(response4,Win)
+        self.assertEqual(response5,Loose)
 
     def test_Equals(self):
         Rock=Choice(1)

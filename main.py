@@ -1,8 +1,15 @@
+'''
+This is the main class where game is implemented. It takes user choice Rock Paper and Scissor, and generates computer choice randomly. It also store all the stats and displays it at the end. There are two function used to display in the monitor. The user can play multiple times
+
+'''
+
 from result import Result
 from choice import Choice
 import random
 import time
 
+
+#This function is used to display the welcome message
 def display():
     print("Welcome to the classic Rock Paper Scissor Game")
     time.sleep(1)
@@ -23,6 +30,7 @@ def display():
     
     return name
 
+#this function is used to display stats
 def displayStatistics(Results_Dic,Total_Games_Played):
     COUNT="count"
     
@@ -37,8 +45,11 @@ def displayStatistics(Results_Dic,Total_Games_Played):
                 if choice is COUNT:
                     continue
                 print("\t with %s %d times"%(choice,Results_Dic[result][choice][COUNT]))
-   
-        
+    
+    return
+
+
+
 def main():
     
     name=display()
@@ -46,12 +57,14 @@ def main():
     Total_Games_Played = 0
     Results_Dic={}
     
+    #creating stats Dictionary
     for result in Result:
         temp_dic={COUNT:0}
         for choice in Choice:
             temp_dic[choice.name]={COUNT:0}
         Results_Dic[result.name]=temp_dic
     
+    #runs untill the user says N or n
     while (True):
     
         Computer_Choice=Choice(random.randint(1,3))
